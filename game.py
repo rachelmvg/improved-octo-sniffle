@@ -15,8 +15,12 @@ correctGuess = False
 while not correctGuess:
     userGuess = int(input('What do you think, the number is?'))
     correctGuess = userGuess == number
-    print(f'You guessed:{userGuess}')
-    if int(userGuess) == number:
-        print(f'That is correct!')
-    else:
-        print('That is wrong!')        
+print(f'You guessed:{userGuess}')
+if userGuess == number:
+    print('That is correct!')
+elif userGuess > number:
+    print('That is waaay too large!')
+else:
+    print('Think bigger')
+
+print(number)
