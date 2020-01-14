@@ -5,7 +5,7 @@
 # First, we need to import the random package and generate a number
 import random
 
-MAX_NUMBER = 20
+MAX_NUMBER = int(input('What is the maximum number that I am allowed to pick?'))
 
 number = random.randint(1, MAX_NUMBER)
 
