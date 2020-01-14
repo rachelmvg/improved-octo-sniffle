@@ -2,8 +2,14 @@
 # It will a number guessing game: the computer will pick a number
 # And the human will have to guess what number it is.
 
-computersNumber = 7
+# First, we need to import the random package and generate a number
+import random
 
+MAX_NUMBER = 20
+
+number = random.randint(1, MAX_NUMBER)
+
+# Ask the user for their first guess
 userGuess = input('What do you think, the number is?')
 
 print(f'You guessed:{userGuess}')
