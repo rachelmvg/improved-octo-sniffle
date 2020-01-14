@@ -15,9 +15,18 @@ userGuess = int(input('What do you think, the number is?'))
 print(f'You guessed:{userGuess}')
 if userGuess == number:
     print('That is correct!')
-elif userGuess > number:
-    print('That is waaay too large!')
 else:
-    print('Think bigger')
+    difference = abs(userGuess - number)
+    if difference > 10:
+        specification = 'waaaay too'
+    if difference > 5:
+        specification = 'too'
+    else:
+        specification = 'a bit too'
+    
+    if userGuess > number:
+        print(f'That is {specification} large!')
+    else:
+        print(f'That is {specification} small!')
 
 print(number)
