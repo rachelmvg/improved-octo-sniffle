@@ -10,10 +10,14 @@ MAX_NUMBER = 20
 number = random.randint(1, MAX_NUMBER)
 
 # Ask the user for their first guess
-userGuess = input('What do you think, the number is?')
+userGuess = int(input('What do you think, the number is?'))
 
 print(f'You guessed:{userGuess}')
-if int(userGuess) == number:
-    print(f'That is correct!')
+if userGuess == number:
+    print('That is correct!')
+elif userGuess > number:
+    print('That is waaay too large!')
 else:
-    print('That is wrong!')        
+    print('Think bigger')
+
+print(number)
