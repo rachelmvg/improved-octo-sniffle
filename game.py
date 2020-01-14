@@ -5,15 +5,18 @@
 # First, we need to import the random package and generate a number
 import random
 
-MAX_NUMBER = 20
+MAX_NUMBER = 5
 
 number = random.randint(1, MAX_NUMBER)
 
 # Ask the user for their first guess
-userGuess = input('What do you think, the number is?')
+correctGuess = False
 
-print(f'You guessed:{userGuess}')
-if int(userGuess) == number:
-    print(f'That is correct!')
-else:
-    print('That is wrong!')        
+while not correctGuess:
+    userGuess = int(input('What do you think, the number is?'))
+    correctGuess = userGuess == number
+    print(f'You guessed:{userGuess}')
+    if int(userGuess) == number:
+        print(f'That is correct!')
+    else:
+        print('That is wrong!')        
