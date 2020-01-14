@@ -13,7 +13,7 @@ number = random.randint(1, MAX_NUMBER)
 userGuess = input('What do you think, the number is?')
 
 print(f'You guessed:{userGuess}')
-if int(userGuess) == computersNumber:
+if int(userGuess) == number:
     print(f'That is correct!')
 else:
     print('That is wrong!')        
